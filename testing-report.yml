@@ -1,0 +1,8 @@
+---
+- summary: |
+  Добавление товара в корзину
+  status: pass
+  ---
+- summary: |
+  Оформление заказа
+  status: pass
