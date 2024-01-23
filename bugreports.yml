@@ -1,0 +1,55 @@
+---
+- summary: |
+Нет значка американского флага возле кнопки "English"
+environment: |
+ Yandex 23.11.3.935 (64-bit)
+ OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажать на кнопку "Language"
+expected-result: |
+  Рядом с кнопкой "English" должено быть изображение американского флага
+actual-result: |
+  Рядом с кнопкой "English" jpg вставка
+---
+- summary: |
+Рядом с ценником товаров есть неизветное число  
+environment: |
+ Yandex 23.11.3.935 (64-bit)
+ OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. На главной стрнице, нажав на любой товар и в корзине рядом с реальной и предыдущей ценной выводится третье неизвестное число
+expected-result: |
+  Пользователю должна выводится только реальная цена и прежняя
+actual-result: |
+  Пользователю вмсете с предней и растоящей выводится рандомное число
+---
+- summary: |
+После перезагрузки страницы сайт меняется с "Русский" на "English"
+environment: |
+ Yandex 23.11.3.935 (64-bit)
+ OC Windows 10
+steps-to-reproduce: |
+  1. Зайти на страницу https://hexlet-products-store.vercel.app/
+  2. Нажмите на кнопку "Language"
+  3. Нажмите на кнопку "Russian"
+  4. Перезагрузите страницу нажав на клавишу "F5"
+expected-result: 
+  После перезагрузки страницы должен оставаться тот язык на котором был сайт до обновления
+actual-result: |
+  После перезагрузки страницы сайт меняется с русского на английский
+---
+- summary: |
+Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
+environment: |
+ Yandex 23.11.3.935 (64-bit)
+ OC Windows 10
+steps-to-reproduce: |
+  1. Зайти в корзину https://hexlet-products-store.vercel.app/cart
+  2. Нажмите на кнопку "Оформить заказ"
+  3. Нажмите на крестик уведомления "Заказ успешно оформлен"
+expected-result:
+  Уведомление должно закрытся
+actual-result: |
+  Уведомление не закрывается
