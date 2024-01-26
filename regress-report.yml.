@@ -1,0 +1,50 @@
+---
+- summary: |
+      На главной страницу нет кнопки регистрации
+      status: pass
+- summary: |
+      Заказ можно оформить без регистрации
+      status: fail
+- summary: |
+      Сразу при открытии сайта рядом с кнопкой "следующая" имеется не работающая кнопка "предыдущая"
+      status: pass
+- summary: |
+      Нет значка американского флага возле кнопки "English"
+      status: pass
+- summary: |
+      Рядом с ценником товаров есть неизветное число  
+      status: fail
+- summary: |
+      После перезагрузки страницы сайт меняется с "Русский" на "English"
+      status: fail
+- summary: |
+      Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
+      status: fail
+
+bugreports:
+- summary: |
+      Кнопка "В корзину/Add to cart" у некоторых товаров занимает 2 строки 
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Кнопка "Add to cart" у некоторых товаров занимает 2 строки"
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+    steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    expected-result: |
+      На всех заказах кнопка "В корзину/Add to cart" должна помещатся на одной строке
+    actual-result: |
+      На некоторых заказах кнопка "В корзину/Add to cart" не помещается на одну строку
+- summary: |
+      Сайт не пускает новых пользователей 
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Кнопка "Add to cart" у некоторых товаров занимает 2 строки"
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+     steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажмите на кнопку "Log in to comment"
+      3. Нажмите "Continue with Email"/"Continue with Git Hub"/"Continue with GitLab"
+     expected-result: |
+      При переходе по этим кнопкам пользователь должен переходить на регистрацию
+     actual-result: |
+      Пользователю приходет уведомление "There is no Vercel account associated with this email address. Sign up?"
