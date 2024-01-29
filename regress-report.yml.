@@ -13,7 +13,7 @@
       status: pass
 - summary: |
       Рядом с ценником товаров есть неизветное число  
-      status: fail
+      status: pass
 - summary: |
       После перезагрузки страницы сайт меняется с "Русский" на "English"
       status: fail
