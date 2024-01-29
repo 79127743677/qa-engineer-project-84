@@ -35,16 +35,86 @@ bugreports:
     actual-result: |
       На некоторых заказах кнопка "В корзину/Add to cart" не помещается на одну строку
 - summary: |
-      Проверка входа пользователя с несуществующим логином и паролем 
+      Проверка входа пользователя через Email  
     environment: |
       "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-      "Проверка входа пользователя с несуществующим логином и паролем"
+      "Проверка входа пользователя через Email"
       "Yandex 23.11.3.935 (64-bit) OC Windows 10"
      steps-to-reproduce: |
       1. Зайти на страницу https://hexlet-products-store.vercel.app/
       2. Нажмите на кнопку "Log in to comment"
-      3. Нажмите "Continue with Email"/"Continue with Git Hub"/"Continue with GitLab"
+      3. Нажмите "Continue with Email"
+      4. Введите в "Email Address" dauletshigirov@icloud.com
      expected-result: |
-      При переходе по этим кнопкам пользователь должен переходить на регистрацию
-     actual-result: |
-      Пользователю приходет уведомление "There is no Vercel account associated with this email address. Sign up?"
+      При пользователь на почту должно придти письмо от сайта
+      actual-result: |
+      Письмо не отправляеться 
+- summary: |
+      Проверка регистрации пользователя через "Don't have an account? Sign Up"
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Проверка регистрации пользователя через "Don't have an account? Sign Up""
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+      steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажмите "Log in to comment"
+      3. Нажмите "Continue with Email"
+      4. Нажмите "Don't have an account? Sign Up"
+      5. Нажмите "Hobby"
+      6. Введите в окно "Team Name" "IvanIvamov"
+      7. Нажмите "Continue"
+      expected-result: |
+      Пользователь должен дальше вводить свои данные
+      actual-result: |
+      Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+      Проверка регистрации пользователя через "Don't have an account? Sign Up"
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Проверка регистрации пользователя через "Don't have an account? Sign Up""
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+      steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажмите "Log in to comment"
+      3. Нажмите "Continue with Email"
+      4. Нажмите "Don't have an account? Sign Up"
+      5. Нажмите "Pro"
+      6. Введите в окно "Team Name" "llm"
+      7. Введите в окно "Team URL" "llm2"
+      8. Нажмите "Continue"
+      expected-result: |
+      Пользователь должен дальше вводить свои данные
+      actual-result: |
+      Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+      Проверка регистрации пользователя через "Continue with SAML SSO"
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Проверка регистрации пользователя через "Continue with SAML SSO""
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+      steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажмите "Log in to comment"
+      3. Нажмите "Continue with SAML SSO"
+      4. В окно "Team Slug" соманду "SAML SSO"
+      5. Нажмите "Continue with SAML SSO"
+      expected-result: |
+      Пользователь должен дальше вводить свои данные
+      actual-result: |
+      Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+      Проверка регистрации пользователя "Login with Passkey" используя телефон или планше
+    environment: |
+      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
+      "Проверка регистрации пользователя через "Login with Passkey" используя телефон или планше
+      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
+      steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажмите "Log in to comment"
+      3. Нажмите "Login with Passkey"
+      4. Нажмите "Использовать телефон или планшет"
+      5. Наведите на QA-код камеру телефона или планшета
+       expected-result: |
+      Пользователь должен войти в систему
+      actual-result: |
+      Пользователя выходит ошибка "Время, отведенное на обработку запроса, истекло."
