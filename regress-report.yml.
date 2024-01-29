@@ -35,10 +35,9 @@ bugreports:
     actual-result: |
       На некоторых заказах кнопка "В корзину/Add to cart" не помещается на одну строку
 - summary: |
-      Сайт не пускает новых пользователей 
+      Проверка входа пользователя с несуществующим логином и паролем 
     environment: |
       "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-      "Кнопка "Add to cart" у некоторых товаров занимает 2 строки"
       "Yandex 23.11.3.935 (64-bit) OC Windows 10"
      steps-to-reproduce: |
       1. Зайти на страницу https://hexlet-products-store.vercel.app/
