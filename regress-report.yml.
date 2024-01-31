@@ -35,21 +35,6 @@ bugreports:
     actual-result: |
       На некоторых заказах кнопка "В корзину/Add to cart" не помещается на одну строку
 - summary: |
-      Проверка входа пользователя через Email  
-    environment: |
-      "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-      "Проверка входа пользователя через Email"
-      "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-     steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите на кнопку "Log in to comment"
-      3. Нажмите "Continue with Email"
-      4. Введите в "Email Address" dauletshigirov@icloud.com
-     expected-result: |
-      При пользователь на почту должно придти письмо от сайта
-      actual-result: |
-      Письмо не отправляеться 
-- summary: |
       Проверка регистрации пользователя через "Don't have an account? Sign Up"
     environment: |
       "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
