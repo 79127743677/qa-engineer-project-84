@@ -1,119 +1,22 @@
 ---
-- summary: |
-    На главной страницу нет кнопки регистрации
+test-cases:
+  - summary: >
+      Краткое описание тест-кейса. Например, проверка входа пользователя с
+      существующими логином и паролем
     status: pass
-- summary: |
-    Заказ можно оформить без регистрации
+  - summary: >
+      Краткое описание тест-кейса. Например, проверка входа пользователя с
+      существующими логином и паролем
     status: fail
-- summary: >
-    Сразу при открытии сайта рядом с кнопкой "следующая" имеется не
-    работающая кнопка "предыдущая"
-
-    status: pass
-- summary: |
-    Нет значка американского флага возле кнопки "English"
-    status: pass
-- summary: |
-    Рядом с ценником товаров есть неизвестное число  
-    status: fail
-- summary: |
-    После перезагрузки страницы сайт меняется с "Русский" на "English"
-    status: fail
-- summary: |
-    Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
-    status: fail
-  bugreports: null
-- summary: |
-    Кнопка "В корзину/Add to cart" у некоторых товаров занимает 2 строки 
-  environment: |
-    "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-    "Кнопка "Add to cart" у некоторых товаров занимает 2 строки"
-    "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-  steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-  expected-result: >
-    На всех заказах кнопка "В корзину/Add to cart" должна помещатся
-    на одной строке
-  actual-result: >
-    На некоторых заказах кнопка "В корзину/Add to cart" не помещается
-    на одну строку
-- summary: |
-    Проверка регистрации пользователя через "Don't have an account? Sign Up"
-  environment: |
-    "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-    "Проверка регистрации пользователя через "Don't have an account? Sign Up""
-    "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-    steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    2. Нажмите "Log in to comment"
-    3. Нажмите "Continue with Email"
-    4. Нажмите "Don't have an account? Sign Up"
-    5. Нажмите "Hobby"
-    6. Введите в окно "Team Name" "IvanIvamov"
-    7. Нажмите "Continue"
+bugreports:
+  - summary: |
+      Короткое описание ошибки
+    environment: |
+      Ссылка на билд/коммит/версия ПО и всего окружения
+    steps-to-reproduce: >
+      Полный перечень шагов для воспроизведения и описание, на
+      каком шаге произошла ошибка
     expected-result: |
-    Пользователь должен дальше вводить свои данные
+      Какой результат должен был быть без ошибки
     actual-result: |
-    Пользователя выкидывает в на страницу "Sing Up - Vercel"
-- summary: |
-    Проверка регистрации пользователя через "Don't have an account? Sign Up"
-  environment: |
-    "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-    "Проверка регистрации пользователя через "Don't have an account? Sign Up""
-    "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-    steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    2. Нажмите "Log in to comment"
-    3. Нажмите "Continue with Email"
-    4. Нажмите "Don't have an account? Sign Up"
-    5. Нажмите "Pro"
-    6. Введите в окно "Team Name" "llm"
-    7. Введите в окно "Team URL" "llm2"
-    8. Нажмите "Continue"
-    expected-result: |
-    Пользователь должен дальше вводить свои данные
-    actual-result: |
-    Пользователя выкидывает в на страницу "Sing Up - Vercel"
-- summary: |
-    Проверка регистрации пользователя через "Continue with SAML SSO"
-  environment: |
-    "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-    "Проверка регистрации пользователя через "Continue with SAML SSO""
-    "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-    steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    2. Нажмите "Log in to comment"
-    3. Нажмите "Continue with SAML SSO"
-    4. В окно "Team Slug" соманду "SAML SSO"
-    5. Нажмите "Continue with SAML SSO"
-    expected-result: |
-    Пользователь должен дальше вводить свои данные
-    actual-result: |
-    Пользователя выкидывает в на страницу "Sing Up - Vercel"
-- summary: >
-    Проверка регистрации пользователя "Login with Passkey" используя
-    телефон или планше
-  environment: >
-    "https://products-store-git-v2bugfixes-hexlet-components.vercel.app/"
-
-    "Проверка регистрации пользователя через "Login with Passkey" используя телефон или планше
-
-    "Yandex 23.11.3.935 (64-bit) OC Windows 10"
-
-    steps-to-reproduce: |
-
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-
-    2. Нажмите "Log in to comment"
-
-    3. Нажмите "Login with Passkey"
-
-    4. Нажмите "Использовать телефон или планшет"
-
-    5. Наведите на QA-код камеру телефона или планшета
-     expected-result: |
-    Пользователь должен войти в систему
-
-    actual-result: |
-
-    Пользователя выходит ошибка "Время, отведенное на обработку запроса, истекло."
+      Какой результат получился на самом деле
