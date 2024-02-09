@@ -1,108 +1,110 @@
 ---
 test-cases:
-    - summary: |
-      Краткое описание тест-кейса. Например, проверка входа пользователя с существующими логином и паролем
+- summary: |
+    Краткое описание тест-кейса. Например, проверка входа пользователя с существующими логином и паролем
+status: pass
+- summary: |
+    Краткое описание тест-кейса. Например, проверка входа пользователя с
+    существующими логином и паролем
+status: fail
+- summary: |
+    На главной страницу нет кнопки регистрации
+status: pass
+- summary: |
+    Заказ можно оформить без регистрации
+status: fail
+- summary: |
+    Сразу при открытии сайта рядом с кнопкой "следующая" имеется не работающая кнопка "предыдущая"
     status: pass
-  - summary: |
-      Краткое описание тест-кейса. Например, проверка входа пользователя с существующими логином и паролем
-    status: fail
-  - summary: |
-      На главной страницу нет кнопки регистрации
-    status: pass
-  - summary: |
-      Заказ можно оформить без регистрации
-    status: fail
-  - summary: >
-      Сразу при открытии сайта рядом с кнопкой "следующая" имеется не работающая кнопка "предыдущая"
-    status: pass
-  - summary: |
-      Нет значка американского флага возле кнопки "English"
-    status: pass
-  - summary: |
-      Рядом с ценником товаров есть неизвестное число  
-    status: fail
-  - summary: |
-      После перезагрузки страницы сайт меняется с "Русский" на "English"
-    status: fail
-  - summary: |
-      Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
-    status: fail
+- summary: |
+    Нет значка американского флага возле кнопки "English"
+status: pass
+- summary: |
+    Рядом с ценником товаров есть неизвестное число  
+status: fail
+- summary: |
+    После перезагрузки страницы сайт меняется с "Русский" на "English"
+status: fail
+- summary: |
+    Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
+status: fail
+
 bugreports:
-  - summary: |
-      Кнопка "В корзину/Add to cart" у некоторых товаров занимает 2 строки 
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    expected-result: >
-      На всех заказах кнопка "В корзину/Add to cart" должна помещатся
-      на одной строке
-    actual-result: >
-      На некоторых заказах кнопка "В корзину/Add to cart" не помещается
-      на одну строку
-  - summary: |
-      Проверка регистрации пользователя через "Don't have an account? Sign Up"
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Continue with Email"
-      4. Нажмите "Don't have an account? Sign Up"
-      5. Нажмите "Hobby"
-      6. Введите в окно "Team Name" "IvanIvamov"
-      7. Нажмите "Continue"
-    expected-result: |
-      Пользователь должен дальше вводить свои данные
-    actual-result: |
-      Пользователя выкидывает в на страницу "Sing Up - Vercel"
-  - summary: |
-      Проверка регистрации пользователя через "Don't have an account? Sign Up"
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Continue with Email"
-      4. Нажмите "Don't have an account? Sign Up"
-      5. Нажмите "Pro"
-      6. Введите в окно "Team Name" "llm"
-      7. Введите в окно "Team URL" "llm2"
-      8. Нажмите "Continue"
-    expected-result: |
-      Пользователь должен дальше вводить свои данные
-    actual-result: |
-      Пользователя выкидывает в на страницу "Sing Up - Vercel"
-  - summary: |
-      Проверка регистрации пользователя через "Continue with SAML SSO"
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Continue with SAML SSO"
-      4. В окно "Team Slug" соманду "SAML SSO"
-      5. Нажмите "Continue with SAML SSO"
-    expected-result: |
-      Пользователь должен дальше вводить свои данные
-    actual-result: |
-      Пользователя выкидывает в на страницу "Sing Up - Vercel"
-  - summary: |
-      Проверка регистрации пользователя "Login with Passkey" используя телефон или планше
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Login with Passkey"
-      4. Нажмите "Использовать телефон или планшет"
-      5. Наведите на QA-код камеру телефона или планшета
-    expected-result: |
-      Пользователь должен войти в систему
-    actual-result: |
-      Пользователя выходит ошибка "Время, отведенное на обработку запроса, истекло."
+- summary: |
+    Кнопка "В корзину/Add to cart" у некоторых товаров занимает 2 строки 
+environment: |
+    Yandex 23.11.3.935 (Официальная сборка) (64 бит)
+    OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+expected-result: |
+    На всех заказах кнопка "В корзину/Add to cart" должна помещатся
+    на одной строке
+actual-result: |
+    На некоторых заказах кнопка "В корзину/Add to cart" не помещается
+    на одну строку
+- summary: |
+    Проверка регистрации пользователя через "Don't have an account? Sign Up"
+environment: |
+    Yandex 23.11.3.935 (Официальная сборка) (64 бит)
+    OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажмите "Log in to comment"
+    3. Нажмите "Continue with Email"
+    4. Нажмите "Don't have an account? Sign Up"
+    5. Нажмите "Hobby"
+    6. Введите в окно "Team Name" "IvanIvamov"
+    7. Нажмите "Continue"
+expected-result: |
+    Пользователь должен дальше вводить свои данные
+actual-result: |
+    Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+    Проверка регистрации пользователя через "Don't have an account? Sign Up"
+environment: |
+    Yandex 23.11.3.935 (Официальная сборка) (64 бит)
+    OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажмите "Log in to comment"
+    3. Нажмите "Continue with Email"
+    4. Нажмите "Don't have an account? Sign Up"
+    5. Нажмите "Pro"
+    6. Введите в окно "Team Name" "llm"
+    7. Введите в окно "Team URL" "llm2"
+    8. Нажмите "Continue"
+expected-result: |
+    Пользователь должен дальше вводить свои данные
+actual-result: |
+    Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+    Проверка регистрации пользователя через "Continue with SAML SSO"
+environment: |
+    Yandex 23.11.3.935 (Официальная сборка) (64 бит)
+    OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажмите "Log in to comment"
+    3. Нажмите "Continue with SAML SSO"
+    4. В окно "Team Slug" соманду "SAML SSO"
+    5. Нажмите "Continue with SAML SSO"
+expected-result: |
+    Пользователь должен дальше вводить свои данные
+actual-result: |
+    Пользователя выкидывает в на страницу "Sing Up - Vercel"
+- summary: |
+    Проверка регистрации пользователя "Login with Passkey" используя телефон или планше
+environment: |
+    Yandex 23.11.3.935 (Официальная сборка) (64 бит)
+    OC Windows 10
+steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажмите "Log in to comment"
+    3. Нажмите "Login with Passkey"
+    4. Нажмите "Использовать телефон или планшет"
+    5. Наведите на QA-код камеру телефона или планшета
+expected-result: |
+    Пользователь должен войти в систему
+actual-result: |
+    Пользователя выходит ошибка "Время, отведенное на обработку запроса, истекло."
