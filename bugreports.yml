@@ -2,7 +2,7 @@
 - summary: |
    На главной страницу нет кнопки регистрации
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти на страницу https://hexlet-products-store.vercel.app/
@@ -14,7 +14,7 @@
 - summary: |
    Сразу при открытии сайта рядом с кнопкой "следующая" имеется не работающая кнопка "предыдущая"
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти на страницу https://hexlet-products-store.vercel.app/
@@ -26,7 +26,7 @@
 - summary: |
    Нет значка американского флага возле кнопки "English"
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти на страницу https://hexlet-products-store.vercel.app/
@@ -39,7 +39,7 @@
 - summary: |
    Рядом с ценником товаров есть неизветное число  
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти на страницу https://hexlet-products-store.vercel.app/
@@ -52,7 +52,7 @@
 - summary: |
    После перезагрузки страницы сайт меняется с "Русский" на "English"
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти на страницу https://hexlet-products-store.vercel.app/
@@ -67,7 +67,7 @@
 - summary: |
    Не работает крестик, чтобы закрыть уведомление "Заказ успешно оформлен"
   environment: |
-   Yandex 23.11.3.935 (64-bit)
+   Yandex 23.11.3.935 (Официальная сборка) (64 бит)
    OC Windows 10
   steps-to-reproduce: |
    1. Зайти в корзину https://hexlet-products-store.vercel.app/cart
