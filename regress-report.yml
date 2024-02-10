@@ -9,12 +9,19 @@ test-cases:
   - summary: |
       Проверка поиск по цене товара, выставив диапазона от 900 до 11190
     status: pass
-  - summary: |
-      После перезагрузки страница сайта меняет с русской раскладки на английскую
-    status: fail
 
 ---
 bugreports:
+  - summary: |
+      Короткое описание ошибки
+    environment: |
+      Ссылка на билд/коммит/версия ПО и всего окружения
+    steps-to-reproduce: |
+      Полный перечень шагов для воспроизведения и описание, на каком шаге произошла ошибка
+    expected-result: |
+      Какой результат должен был быть без ошибки
+    actual-result: |
+      Какой результат получился на самом деле
   - summary: |
       Кнопка "В корзину" у некоторых товаров отображается некорректно 
     environment: |
@@ -27,52 +34,3 @@ bugreports:
       На всех товарах кнопка "В корзину" должна помещается на одной строке
     actual-result: |
       На некоторых заказах кнопка "В корзину" отображается некорректно
-  - summary: |
-      Проверка регистрации пользователя путем "Don't have an account? Sign Up"
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Continue with Email"
-      4. Нажмите "Don't have an account? Sign Up"
-      5. Нажмите "Hobby"
-      6. Введите в окно "Team Name" "IvanIvamov"
-      7. Нажмите "Continue", на этом пункте произошла ошибка
-    expected-result: |
-      Пользователь должен дальше вводить свои данные
-    actual-result: |
-      Пользователя выкидывает в на страницу "Sing Up - Vercel"
-  - summary: |
-      Проверка регистрации пользователя путём "Continue with SAML SSO"
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Continue with SAML SSO"
-      4. В окно "Team Slug" соманду "SAML SSO"
-      5. Нажмите "Continue with SAML SSO"
-    expected-result: |
-      Пользователь должен дальше вводить свои данные
-    actual-result: |
-      Пользователя выкидывает в на страницу "Sing Up - Vercel"
-  - summary: >
-      Проверка регистрации пользователя "Login with Passkey" используя
-      телефон или планшет
-    environment: |
-      Yandex 23.11.3.935 (Официальная сборка) (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
-      2. Нажмите "Log in to comment"
-      3. Нажмите "Login with Passkey"
-      4. Нажмите "Использовать телефон или планшет"
-      5. Наведите на QA-код камеру телефона или планшета
-    expected-result: |
-      Пользователь должен войти в систему
-    actual-result: >
-      Пользователя выходит ошибка "Время, отведенное на обработку
-      запроса, истекло."
